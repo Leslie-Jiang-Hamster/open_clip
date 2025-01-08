@@ -1,0 +1,15 @@
+python -m open_clip_train.main \
+    --save-frequency 1 \
+    --zeroshot-frequency 1 \
+    --report-to tensorboard \
+    --train-data="data/train.csv" \
+    --val-data="data/val.csv" \
+    --csv-img-key image \
+    --csv-caption-key caption \
+    --warmup 10000 \
+    --batch-size=128 \
+    --lr=1e-3 \
+    --wd=0.1 \
+    --epochs=10 \
+    --workers=8 \
+    --model ViT-B-32
