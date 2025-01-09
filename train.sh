@@ -4,12 +4,13 @@ python -m open_clip_train.main \
     --report-to tensorboard \
     --train-data="data/train.csv" \
     --val-data="data/val.csv" \
-    --csv-img-key image \
+    --csv-img-key "image" \
     --csv-caption-key caption \
+    --csv-separator "," \
     --warmup 10000 \
     --batch-size=128 \
     --lr=1e-3 \
     --wd=0.1 \
-    --epochs=10 \
+    --epochs=30 \
     --workers=8 \
     --model ViT-B-32
